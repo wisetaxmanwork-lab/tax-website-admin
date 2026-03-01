@@ -13,14 +13,6 @@ import {
   doc, updateDoc, serverTimestamp 
 } from 'firebase/firestore';
 
-// --- FIREBASE CONFIGURATION ---
-const getEnvVar = (name, fallback) => {
-  if (typeof process !== 'undefined' && process.env) {
-    return process.env[name] || fallback;
-  }
-  return fallback;
-};
-
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
